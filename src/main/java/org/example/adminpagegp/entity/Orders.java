@@ -1,23 +1,24 @@
 package org.example.adminpagegp.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
 import lombok.Data;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tbl_category")
+@Table(name = "tbl_orders")
 @Data
-public class Categories {
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     String id;
-    @Column(name = "name")
-    String name;
+    @Column(name = "product_id")
+    String productId;
+    @Column(name = "quantity")
+    Integer quantity;
     @Column(name = "description")
-    LocalDate description;
+    String description;
     @Column(name = "status")
     Integer status;
     @Column(name = "created_at")

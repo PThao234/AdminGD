@@ -1,23 +1,32 @@
 package org.example.adminpagegp.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tbl_category")
+@Table(name = "tbl_product")
 @Data
-public class Categories {
+@NoArgsConstructor
+@AllArgsConstructor
+public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     String id;
     @Column(name = "name")
     String name;
+    @Column(name = "avatar")
+    String avatar;
+    @Column(name = "price")
+    Float price;
+    @Column(name = "sale_price")
+    Float salePrice;
     @Column(name = "description")
-    LocalDate description;
+    String description;
     @Column(name = "status")
     Integer status;
     @Column(name = "created_at")
@@ -28,4 +37,7 @@ public class Categories {
     String createdBy;
     @Column(name = "updated_by")
     String updatedBy;
+
+    @Column(name = "category_id")
+    String categoryId;
 }

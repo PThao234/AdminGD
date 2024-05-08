@@ -1,25 +1,36 @@
 package org.example.adminpagegp.entity;
 
 import jakarta.persistence.*;
-import jdk.jfr.Enabled;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.example.adminpagegp.contant.Role;
 
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tbl_category")
-@Data
-public class Categories {
+@Table(name = "tbl_accounts")
+@Data @NoArgsConstructor
+@AllArgsConstructor
+public class Accounts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     String id;
     @Column(name = "name")
-    String name;
-    @Column(name = "description")
-    LocalDate description;
+    String username;
+    @Column(name = "email")
+    String email;
+    @Column(name = "phone")
+    String phone;
+    @Column(name = "address")
+    String address;
+    @Column(name = "password")
+    String password;
     @Column(name = "status")
     Integer status;
+    @Column(name = "role")
+    String role = Role.USER.getName();
     @Column(name = "created_at")
     LocalDate createdAt = LocalDate.now();
     @Column(name = "updated_at")
