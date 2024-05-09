@@ -16,7 +16,7 @@ public class Products {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    String id;
+    Integer id;
     @Column(name = "name")
     String name;
     @Column(name = "avatar")
@@ -39,5 +39,5 @@ public class Products {
     String updatedBy;
 
     @Column(name = "category_id")
-    String categoryId;
+    Integer categoryId;
 }

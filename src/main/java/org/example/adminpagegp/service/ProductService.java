@@ -26,10 +26,10 @@ public class ProductService {
     public Products softDelete(String id){
         Products product =  productRepository.findById(id).orElse(null);
         if(product != null) {
-            product.setStatus(2);
+//            product.setStatus(2);
             return productRepository.save(product);
         }else{
-            log.error("Sản phẩm không tồn tại");
+//            log.error("Sản phẩm không tồn tại");
         }
         return null;
     }

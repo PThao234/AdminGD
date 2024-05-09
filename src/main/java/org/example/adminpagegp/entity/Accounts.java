@@ -16,7 +16,7 @@ public class Accounts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    String id;
+    Integer id;
     @Column(name = "name")
     String username;
     @Column(name = "email")
@@ -30,7 +30,7 @@ public class Accounts {
     @Column(name = "status")
     Integer status;
     @Column(name = "role")
-    String role = Role.USER.getName();
+    String role = Role.USER.name();
     @Column(name = "created_at")
     LocalDate createdAt = LocalDate.now();
     @Column(name = "updated_at")

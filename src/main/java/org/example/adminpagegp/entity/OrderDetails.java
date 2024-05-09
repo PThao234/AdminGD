@@ -12,7 +12,7 @@ public class OrderDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    String id;
+    Integer id;
     @Column(name = "code")
     String code;
     @Column(name = "customer_name")
@@ -28,7 +28,7 @@ public class OrderDetails {
     @Column(name = "status")
     Integer status;
     @Column(name = "account_id")
-    String accountId;
+    Integer accountId;
     @Column(name = "created_at")
     LocalDate createdAt = LocalDate.now();
     @Column(name = "updated_at")

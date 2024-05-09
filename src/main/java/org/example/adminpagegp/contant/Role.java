@@ -1,7 +1,6 @@
 package org.example.adminpagegp.contant;
 
 
-import lombok.Data;
 import lombok.Getter;
 
 @Getter

@@ -12,9 +12,9 @@ public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    String id;
+    Integer id;
     @Column(name = "product_id")
-    String productId;
+    Integer productId;
     @Column(name = "quantity")
     Integer quantity;
     @Column(name = "description")

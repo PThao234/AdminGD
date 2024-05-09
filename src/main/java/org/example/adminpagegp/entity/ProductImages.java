@@ -12,15 +12,15 @@ public class ProductImages {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    String id;
-    @Column(name = "title")
+    Integer id;
+    @Column(name = "name")
     String title;
     @Column(name = "path")
     String path;
     @Column(name = "status")
     Integer status;
     @Column(name = "product_id")
-    String productId;
+    Integer productId;
     @Column(name = "created_at")
     LocalDate createdAt = LocalDate.now();
     @Column(name = "updated_at")
